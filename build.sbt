@@ -13,5 +13,11 @@ lazy val settings =
     name := "Scala experiments",
     scalaVersion := "2.13.4",
     organization := "com.polytypic",
-    scalacOptions in (Compile, compile) ++= Seq("-Ywarn-unused", "-deprecation")
+    scalacOptions in (Compile, compile) ++= Seq(
+      "-Ywarn-unused",
+      "-Werror",
+      "-deprecation",
+      "-unchecked",
+      "-feature"
+    )
   )
